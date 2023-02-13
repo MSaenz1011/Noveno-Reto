@@ -12,22 +12,9 @@ console.log(myFunction({ w: 15, x: 22, y: 13 })) // 50
 
 //Fibonacci
 
-function fibonacci(num) {
-    let n1 = 0;
-    let n2 = 1;
-    let sequence;
-
-    if(num===0){
-        return 1
-    }
-
-    for (let i = 1; i <= num; i++) {
-        sequence= n1 + n2; 
-        n1= n2
-        n2= sequence
-    }
-
-    return sequence
+function fibonacci(n) {
+  if (n < 2) {
+    return n;
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2); 
 }
-
-console.log(fibonacci(0))  //1
